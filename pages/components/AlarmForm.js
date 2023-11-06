@@ -91,8 +91,8 @@ export default function AlarmForm() {
 
         <div className='d-flex m-auto Checkboxes-container'>
         {
-            numbers.map((num, key) =>
-                <div className='Checkbox-container'>
+            numbers.map((key, num) =>
+                <div key={key} className='Checkbox-container'>
                     <input 
                         className="Checkbox" 
                         name={'checkBox' + num} 
