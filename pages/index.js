@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
-import AlarmForm from './components/AlarmForm'
-import AlarmList from './components/AlarmList'
+import AlarmForm from '../components/AlarmForm'
+import AlarmList from '../components/AlarmList'
 
 import { PrismaClient } from '@prisma/client'
 import { useEffect } from 'react'

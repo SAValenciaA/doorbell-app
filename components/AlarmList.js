@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default function AlarmList(props) {
+
+  const {alarmsDate = []} = props
+  const {alarmsWeek = []} = props
+
   return (
     <div className='w-50 d-flex'>
         <div className='w-50'>
