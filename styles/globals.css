@@ -1,26 +1,55 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.Checkbox-container {
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.Checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
-
-* {
-  box-sizing: border-box;
+.Checkbox-face {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgb(49, 78, 173);
+  transition-duration: 0.1s;
+  position: relative;
+  top: -30px;
 }
+.Checkbox:checked ~ .Checkbox-face {
+  background-color: rgb(49, 78, 173);
+  transition-duration: 0.1s;
+}
+.Checkboxes-container {
+  width: fit-content;
+}
+.color-picker {
+  opacity: 0;
+  display: block;
+  margin: 5px auto 0px;
+  transition: 0.6s;
+}
+.radio-color {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.radio-text {
+  border: 4px solid rgb(49, 78, 173);
+  color: rgb(49, 78, 173);
+  margin: 10px;
+  padding: 3px;
+  transition: 0.6s;
+}
+.radio-color:checked ~ .radio-text {
+  background-color: rgb(49, 78, 173);
+  color: #eee;
+  transition: 0.6s;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+}
+.radio-color:checked ~ .color-picker {
+  opacity: 1;
+  margin: 5px auto 40px;
+  transition: 0.6s;
 }
