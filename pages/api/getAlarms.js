@@ -7,7 +7,11 @@ export default async (req, res) => {
         return res.status(405).json({message: 'Method not allowed'})
     }
 
-    const alarmsByDate = await prisma.alarmsByDate.findMany()
+    const alarmsByDate = await prisma.alarmsByDate.findMany(  {orderBy: [
+        {
+          s: 'asc',
+        }
+      ]})
     const alarmsByWeek = await prisma.alarmsByWeek.findMany()
     res.json({
         specificDates: alarmsByDate,

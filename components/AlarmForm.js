@@ -26,9 +26,7 @@ export default function AlarmForm() {
 
     const handleSubmit = async () => {
         var alarm = {
-            h: Number(hour) ,
-            min: Number(min),
-            s: Number(sec),
+            s: (Number(hour) * 60 * 60) + (Number(min) * 60) + Number(sec),
             d: Number(day),
             m: Number(month),
             y: Number(year),

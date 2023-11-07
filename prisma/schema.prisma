@@ -12,11 +12,9 @@ datasource db {
 }
 
 model alarmsByDate {
-  id  Int    @id @default(autoincrement())
-  h   Int
-  min Int
-  s   Int
-  r   String
+  id Int    @id @default(autoincrement())
+  s  Int
+  r  String
 
   d Int
   m Int
@@ -26,11 +24,9 @@ model alarmsByDate {
 }
 
 model alarmsByWeek {
-  id  Int    @id @default(autoincrement())
-  h   Int
-  min Int
-  s   Int
-  r   String
+  id Int    @id @default(autoincrement())
+  s  Int
+  r  String
 
   w Int[]
 
