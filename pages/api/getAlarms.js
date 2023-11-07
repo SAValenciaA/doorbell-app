@@ -9,7 +9,7 @@ export default async (req, res) => {
 
     const alarmsByDate = await prisma.alarmsByDate.findMany(  {orderBy: [
         {
-          s: 'asc',
+          s: 'desc',
         }
       ]})
     const alarmsByWeek = await prisma.alarmsByWeek.findMany()
