@@ -9,13 +9,13 @@ export default async (req, res) => {
     const data = JSON.parse(req.body)
     
     if(data.weekly) {
-        const {weekly, day, month, year, ...alarm} = JSON.parse(req.body)
+        const {weekly, d, m, y, ...alarm} = JSON.parse(req.body)
         const savedPerson = await prisma.alarmsByWeek.create( {
             data: alarm
         })
         res.json(prisma.alarmsByWeek.findMany())
     } else {
-        const {weekly, weekDay, ...alarm} = JSON.parse(req.body)
+        const {weekly, w, ...alarm} = JSON.parse(req.body)
         const savedAlarm = await prisma.alarmsByDate.create( {
             data: alarm
         })

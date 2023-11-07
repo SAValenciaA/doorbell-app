@@ -12,29 +12,29 @@ datasource db {
 }
 
 model alarmsByDate {
-  id       Int    @id @default(autoincrement())
-  hour     Int
-  minute   Int
-  seconds  Int
-  ringtone String
+  id  Int    @id @default(autoincrement())
+  h   Int
+  min Int
+  s   Int
+  r   String
 
-  day   Int
-  month Int
-  year  Int
+  d Int
+  m Int
+  y Int
 
-  color String
+  c String
 }
 
 model alarmsByWeek {
-  id       Int    @id @default(autoincrement())
-  hour     Int
-  minute   Int
-  seconds  Int
-  ringtone String
+  id  Int    @id @default(autoincrement())
+  h   Int
+  min Int
+  s   Int
+  r   String
 
-  weekDay Int
+  w Int[]
 
-  color String
+  c String
 }
 
 model ringtones {

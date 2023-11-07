@@ -35,10 +35,10 @@ export default function Home({alarmsWeek, alarmsDate, ringtones}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="d-flex flex-row vh-100">
+      <main>
 
-        <AlarmForm className='col' />
-        <AlarmList className='col' alarmsWeek={alarmsWeek} alarmsDate={alarmsDate} ringtones={ringtones} />
+        <AlarmForm className='half' />
+        <AlarmList className='half' alarmsWeek={alarmsWeek} alarmsDate={alarmsDate} ringtones={ringtones} />
         
       </main>
 
