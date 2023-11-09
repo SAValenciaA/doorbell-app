@@ -15,7 +15,7 @@ export default function Listrow(props) {
   const handleDelete = async () => {
     var data = props.alarm.w ? { id: props.alarm.id, by: "week" } : {id: props.alarm.id, by: "date" }
     const res = await fetch('/api/deleteAlarm', {
-      method:'POST',
+      method:'DELETE',
       body: JSON.stringify(data)
     })
     const val = await res.json()
