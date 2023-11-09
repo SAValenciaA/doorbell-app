@@ -11,8 +11,21 @@ export default function Listrow(props) {
   function pad(num) {
     return String(num).padStart(2, '0');
   }
+
+  const handleDelete = async () => {
+    var data = props.alarm.w ? { id: props.alarm.id, by: "week" } : {id: props.alarm.id, by: "date" }
+    const res = await fetch('/api/deleteAlarm', {
+      method:'POST',
+      body: JSON.stringify(data)
+    })
+    const val = await res.json()
+    console.log(val)
+
+  }
+
   return (
     <div className='list-item'>
+      <span className='id value'> <button onClick={()=> handleDelete()}>Eliminar</button></span>
       <span className='id value'>{props.alarm.id}</span>
       <span className='value'>{timestampe}</span>
 
